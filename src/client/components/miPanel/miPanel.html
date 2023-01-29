@@ -1,0 +1,41 @@
+<template name="miPanel">
+    <div class="miPanel">
+
+        <table class="w-100">
+            {{#if hasName }}
+                <tr>
+                    <td class="mi-name" colspan="2">[ {{ name }} ]</td>
+                </tr>
+            {{/if}}
+            {{#if hasCreatedAt }}
+                <tr>
+                    <td class="mi-right mi-col1 mi-right">{{_ namespace "panel.createdAt" }}</td>
+                    <td>{{ createdAt }}</td>
+                </tr>
+            {{/if}}
+            {{#if hasCreatedBy }}
+                <tr>
+                    <td class="mi-right mi-col1 mi-right">{{_ namespace "panel.createdBy" }}</td>
+                    <td>{{ createdBy }}</td>
+                </tr>
+            {{/if}}
+            {{#if hasUpdatedAt }}
+                <tr>
+                    <td class="mi-right mi-col1 mi-right">{{_ namespace "panel.updatedAt" }}</td>
+                    <td>{{ updatedAt }}</td>
+                </tr>
+            {{/if}}
+            {{#if hasUpdatedBy }}
+                <tr>
+                    <td class="mi-right mi-col1 mi-right">{{_ namespace "panel.updatedBy" }}</td>
+                    <td>{{ updatedBy }}</td>
+                </tr>
+            {{/if}}
+            <tr>
+                <td class="mi-right mi-col1 mi-right">{{_ namespace "panel.identifier" }}</td>
+                <td>{{ id }}</td>
+            </tr>
+        </table>
+
+    </div>
+</template>
