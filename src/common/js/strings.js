@@ -21,7 +21,7 @@ miModalInfo.strings = {
     },
     fr_FR: {
         button: {
-            informations: 'Informations sur %s'
+            informations: 'Informations sur "%s"'
         },
         dialog: {
             close: 'Fermer',
