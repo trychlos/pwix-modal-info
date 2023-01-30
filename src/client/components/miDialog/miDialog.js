@@ -18,13 +18,25 @@ import '../miPanel/miPanel.js';
 import './miDialog.html';
 
 Template.miDialog.onRendered( function(){
-    this.$( '.modal' ).modal( 'show' );
+    const self = this;
+
+    if( self.$( '.modal' ).draggable ){
+        self.$( '.modal' ).draggable({
+            handle: '.modal-header',
+            cursor: 'grab'
+        });
+    }
+
+    self.$( '.modal' ).modal( 'show' );
+
+    // add a tag class to body element to let the stylesheet identify *this* modal
+    $( 'body' ).addClass( 'classModalInfo' );
 });
 
 Template.miDialog.helpers({
     // i18n namespace
     namespace(){
-        return pwiModalInfo.strings;
+        return miModalInfo.strings;
     },
 
     // miPanel parameters
@@ -37,14 +49,14 @@ Template.miDialog.helpers({
 
     // modal title
     title(){
-        return this.title ? this.title : i18n.label( pwiModalInfo.strings, 'dialog.informations' );
+        return this.title ? this.title : i18n.label( miModalInfo.strings, 'dialog.informations' );
     }
 });
 
 Template.miDialog.events({
-
     // remove the Blaze element from the DOM
-    'hidden.bs.modal .miModalIinfo'( event, instance ){
+    'hidden.bs.modal .miDialog'( event, instance ){
+        $( 'body' ).removeClass( 'classModalInfo' );
         Blaze.remove( instance.view );
     }
 });
