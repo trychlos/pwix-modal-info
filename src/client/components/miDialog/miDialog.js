@@ -30,7 +30,7 @@ Template.miDialog.onRendered( function(){
     self.$( '.modal' ).modal( 'show' );
 
     // add a tag class to body element to let the stylesheet identify *this* modal
-    $( 'body' ).addClass( 'classModalInfo' );
+    $( 'body' ).addClass( 'miModalInfo-miDialog-class' );
 });
 
 Template.miDialog.helpers({
@@ -56,7 +56,7 @@ Template.miDialog.helpers({
 Template.miDialog.events({
     // remove the Blaze element from the DOM
     'hidden.bs.modal .miDialog'( event, instance ){
-        $( 'body' ).removeClass( 'classModalInfo' );
+        $( 'body' ).removeClass( 'miModalInfo-miDialog-class' );
         Blaze.remove( instance.view );
     }
 });
