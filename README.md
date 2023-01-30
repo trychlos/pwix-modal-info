@@ -64,6 +64,11 @@ Only requested fields are:
 - updatedAt
 - updatedBy
 
+
+## Draggable dialogs
+
+This package can take advantage of the jQuery UI resources. If it happens that your application already has this jQuery UI dependancy, then `pwix:modal-info` will benefit of that of that, and make the modal dialogs draggable. Isn't fun ?
+
 ---
 P. Wieser
 - Last updated on 2023, Jan. 29th
