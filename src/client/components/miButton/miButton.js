@@ -10,9 +10,18 @@
  *  - object: the object to be displayed
  */
 
+import { pwixI18n as i18n } from 'meteor/pwix:i18n';
+
 import '../miDialog/miDialog.js';
 
 import './miButton.html';
+
+Template.miButton.helpers({
+    // a title for the button
+    titleButton(){
+        return this.titleButton ? this.titleButton : i18n.label( miModalInfo.strings, 'button.informations', this.name || this.object._id );
+    }
+});
 
 Template.miButton.events({
     // open the dialog

@@ -17,20 +17,23 @@ None at the moment.
 
 ## What does it provide ?
 
-`pwix:modal-info` essentially provides three Blaze components:
+### A global object
 
-### miButton
+`miModalInfo`
+
+### Blaze components
+
+#### miButton
 
 Just a button which will triggers the dialog opening with the attached object.
 
 Accepted parameters are:
-- titleButton: the title attached to the button, defaulting to 'Informations'
+- titleButton: the title attached to the button, defaulting to 'Informations about <name>'
 - titleDialog: the title of the to-be-opened dialog, defaulting to 'Informations'
 - name: the name to be displayed at the top of the object informations, defaulting to nothing
 - object: (mandatory) the object to be displayed.
 
-
-### miPanel
+#### miPanel
 
 The display panel as an independant component. You are so able to integrate it into your own page.
 
@@ -38,7 +41,7 @@ Accepted parameters are:
 - name: the name to be displayed at the top of the object informations, defaulting to nothing
 - object: (mandatory) the object to be displayed.
 
-### miDialog
+#### miDialog
 
 The modal dialog itself.
 
