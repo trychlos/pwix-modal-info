@@ -2,8 +2,11 @@
  * pwix:modal-info/src/common/js/strings.js
  */
 
-pwiModalInfo.strings = {
+miModalInfo.strings = {
     en_US: {
+        button: {
+            informations: 'Informations about "%s"'
+        },
         dialog: {
             close: 'Close',
             informations: 'Informations'
@@ -17,6 +20,9 @@ pwiModalInfo.strings = {
         }
     },
     fr_FR: {
+        button: {
+            informations: 'Informations sur %s'
+        },
         dialog: {
             close: 'Fermer',
             informations: 'Informations'
