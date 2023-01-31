@@ -1,6 +1,6 @@
 Package.describe({
     name: 'pwix:modal-info',
-    version: '1.1.0-post',
+    version: '1.2.0',
     summary: 'A Bootstrap-based Meteor package which displays object informations in a modal dialog',
     git: 'https://github.com/trychlos/pwix-modal-info',
     documentation: 'README.md'
@@ -28,11 +28,11 @@ function configure( api ){
     api.use( 'ecmascript' );
     api.use( 'less@4.0.0', 'client' );
     api.use( 'pwix:i18n@1.0.0', 'client' );
+    api.use( 'tmeasday:check-npm-versions@1.0.2', 'server' );
     api.addFiles( 'src/client/components/miButton/miButton.js', 'client' );
     api.addFiles( 'src/client/components/miDialog/miDialog.js', 'client' );
     api.addFiles( 'src/client/components/miPanel/miPanel.js', 'client' );
 }
 
-Npm.depends({
-    'bootstrap': '5.2.1'
-});
+// NPM dependencies are checked in /src/server/js/check_npms.js
+// See also https://guide.meteor.com/writing-atmosphere-packages.html#npm-dependencies
