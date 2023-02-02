@@ -1,6 +1,4 @@
-# pwix:modal-info
-
-## ChangeLog
+# pwix:modal-info - ChangeLog
 
 | Version | Release    | Content |
 | ---:    | :---       | :---    |
