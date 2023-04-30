@@ -1,10 +1,10 @@
-# pwix:modal-info - README
+# pwix:modal-info
 
 ## What is it ?
 
 This is a Bootstra-based Meteor package which displays standard informations about an object:
 
-- maybe a name as a (centerd) title
+- maybe a name as a (centered) title
 - created at
 - created by
 - last updated at
@@ -28,7 +28,7 @@ None at the moment.
 Just a button which will triggers the dialog opening with the attached object.
 
 Accepted parameters are:
-- titleButton: the title attached to the button, defaulting to 'Informations about <name>'
+- titleButton: the title attached to the button, defaulting to 'Informations about &lt;name&gt;'
 - titleDialog: the title of the to-be-opened dialog, defaulting to 'Informations'
 - name: the name to be displayed at the top of the object informations, defaulting to nothing
 - object: (mandatory) the object to be displayed.
@@ -51,6 +51,8 @@ Accepted parameters are:
 - object: (mandatory) the object to be displayed.
 
 _Note_: the package is cool enough to destroy itself the Blaze created view on dialog close. So you don't have to take care about that.
+
+![Informations](/maintainer/png/informations.png)
 
 ## Server-side
 
@@ -90,4 +92,4 @@ New and updated translations are willingly accepted, and more than welcome. Just
 
 ---
 P. Wieser
-- Last updated on 2023, Feb. 2nd
+- Last updated on 2023, Apr. 30th
