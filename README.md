@@ -2,7 +2,7 @@
 
 ## What is it ?
 
-This is a Bootstra-based Meteor package which displays standard informations about an object:
+This is a Bootstrap-based Meteor package which displays standard informations about an object:
 
 - maybe a name as a (centered) title
 - created at
@@ -65,6 +65,8 @@ Only requested fields are:
 - createdBy
 - updatedAt
 - updatedBy
+
+This is needed because we want display the email of the user responsible of the reaction (resp. the last update) of the displayed object.
 
 ## Draggable dialogs
 
