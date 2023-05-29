@@ -36,3 +36,7 @@ miModalInfo.strings = {
         }
     }
 };
+
+// actually a package should only provide these short language fallbacks
+miModalInfo.strings.en = miModalInfo.strings.en_US;
+miModalInfo.strings.fr = miModalInfo.strings.fr_FR;
