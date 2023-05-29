@@ -60,19 +60,19 @@ Template.miPanel.helpers({
         return Template.instance().MI.createdBy.get();
     },
     hasCreatedAt(){
-        return this.object.createdAt;
+        return Object.keys( this.object ).includes( 'createdAt' );
     },
     hasCreatedBy(){
-        return this.object.createdBy && this.object.createdBy.length;
+        return Object.keys( this.object ).includes( 'createdBy' );
     },
     hasName(){
-        return this.name && this.name.length;
+        return Object.keys( this.object ).includes( 'name' );
     },
     hasUpdatedAt(){
-        return this.object.updatedAt;
+        return Object.keys( this.object ).includes( 'updatedAt' );
     },
     hasUpdatedBy(){
-        return this.object.updatedBy && this.object.updatedBy.length;
+        return Object.keys( this.object ).includes( 'updatedBy' );
     },
     id(){
         return this.object._id;
