@@ -2,7 +2,8 @@
 
 | Version | Release    | Content |
 | ---:    | :---       | :---    |
-| xxx   | xxx | Be more tolerant about language specification |
+| 1.3.0   | 2023- 5-29 | Now relies on pwix:modal package (todo #2) |
+|         |            | Be more tolerant about language specification |
 | 1.2.1   | 2023- 4-30 | Add miDialog screenshot in README |
 | 1.2.0   | 2023- 1-31 | Replace hardcoded NPM dependencies with tmeasday:check-npm-versions (runtime, development environment only) |
 | 1.1.0   | 2023- 1-30 | make miDialog draggable if jQuery UI is present |

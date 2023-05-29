@@ -9,7 +9,8 @@
  *  - object: the object to be displayed
  */
 
-import { pwixI18n as i18n } from 'meteor/pwix:i18n';
+import { pwixI18n } from 'meteor/pwix:i18n';
+import { pwixModal } from 'meteor/pwix:modal';
 
 import '../../../common/js/index.js';
 
@@ -17,46 +18,51 @@ import '../miPanel/miPanel.js';
 
 import './miDialog.html';
 
-Template.miDialog.onRendered( function(){
+Template.miDialog.onCreated( function(){
     const self = this;
 
-    if( self.$( '.modal' ).draggable ){
-        self.$( '.modal' ).draggable({
-            handle: '.modal-header',
-            cursor: 'grab'
-        });
-    }
+    self.MI = {
+        title: new ReactiveVar( null ),
+        name: new ReactiveVar( null ),
+        object: new ReactiveVar( null ),
 
-    self.$( '.modal' ).modal( 'show' );
+        setObject( name ){
+            if( Object.keys( Template.currentData()).includes( name )){
+                const value = Template.currentData()[name];
+                self.MI[name].set( value );
+            }
+        },
 
-    // add a tag class to body element to let the stylesheet identify *this* modal
-    $( 'body' ).addClass( 'miModalInfo-miDialog-class' );
-});
+        setString( name ){
+            if( Object.keys( Template.currentData()).includes( name )){
+                const value = Template.currentData()[name];
+                if( value && ( typeof value === 'string' || value instanceof String )){
+                    self.MI[name].set( value );
+                }
+            }
+        }
+    };
 
-Template.miDialog.helpers({
-    // i18n namespace
-    namespace(){
-        return miModalInfo.strings;
-    },
+    // get title
+    self.autorun(() => {
+        self.MI.setString( 'title' );
+    });
+    // get name
+    self.autorun(() => {
+        self.MI.setString( 'name' );
+    });
+    // get object
+    self.autorun(() => {
+        self.MI.setObject( 'object' );
+    });
 
-    // miPanel parameters
-    panelParms(){
-        return {
-            name: this.name,
-            object: this.object
-        };
-    },
-
-    // modal title
-    title(){
-        return this.title ? this.title : i18n.label( miModalInfo.strings, 'dialog.informations' );
-    }
-});
-
-Template.miDialog.events({
-    // remove the Blaze element from the DOM
-    'hidden.bs.modal .miDialog'( event, instance ){
-        $( 'body' ).removeClass( 'miModalInfo-miDialog-class' );
-        Blaze.remove( instance.view );
-    }
+    // and run the dialog
+    pwixModal.run({
+        mdTitle: self.MI.title.get() || pwixI18n.label( miModalInfo.strings, 'dialog.informations' ),
+        mdBody: 'miPanel',
+        mdButtons: [ MD_BUTTON_CLOSE ],
+        // parameters targeting the miPanel component
+        name: self.MI.name.get(),
+        object: self.MI.object.get()
+    });
 });
