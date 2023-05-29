@@ -25,15 +25,6 @@ Template.miPanel.onCreated( function(){
         handle: self.subscribe( 'miUsers' )
     };
 
-    // list received users
-    /*
-    self.autorun(() => {
-        if( self.MI.handle.ready()){
-            console.log( Meteor.users.find().fetch());
-        }
-    });
-    */
-
     // get the responsible of the creation
     self.autorun(() => {
         if( self.MI.handle.ready()){
