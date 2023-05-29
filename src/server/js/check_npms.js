@@ -5,11 +5,9 @@
 import { checkNpmVersions } from 'meteor/tmeasday:check-npm-versions';
 
 if( false ){
-    require( '@popperjs/core/package.json' );
-    require( 'bootstrap/package.json' );
+    // whitelist here (including package.json) the packages which anot automatically detected
 }
 
 checkNpmVersions({
-    '@popperjs/core': '^2.11.6',
-    'bootstrap': '^5.2.1'
-}, 'pwix:modal-info' );
+},
+    'pwix:modal-info' );
