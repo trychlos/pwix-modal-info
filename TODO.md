@@ -11,7 +11,8 @@
 |   Id | Date       | Description and comment(s) |
 | ---: | :---       | :---                       |
 |    1 | 2022- 1-29 | be able to use another data source than Meteor.users, e.g. an external identity referential (aka an IAM) |
-|    4 |  |  |
+|    4 | 2023- 6-12 | Have miModalInfo.i18n.namespace() to let another package add a translation to this one |
+|    5 |  |  |
 
 ---
 ## Done
