@@ -19,7 +19,7 @@ None at the moment.
 
 ### A global object
 
-`miModalInfo`
+`ModalInfo`
 
 ### Blaze components
 

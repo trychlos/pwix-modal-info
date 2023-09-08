@@ -19,7 +19,7 @@ import './miButton.html';
 Template.miButton.helpers({
     // a title for the button
     titleButton(){
-        return this.titleButton ? this.titleButton : i18n.label( miModalInfo.strings, 'button.informations', this.name || this.object._id );
+        return this.titleButton ? this.titleButton : i18n.label( ModalInfo.strings, 'button.informations', this.name || this.object._id );
     }
 });
 

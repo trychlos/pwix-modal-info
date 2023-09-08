@@ -1,14 +1,45 @@
-# pwix:modal-info - ChangeLog
+# pwix:modal-info
 
-| Version | Release    | Content |
-| ---:    | :---       | :---    |
-| 1.3.0   | 2023- 5-29 | Now relies on pwix:modal package (todo #2) |
-|         |            | Be more tolerant about language specification |
-| 1.2.1   | 2023- 4-30 | Add miDialog screenshot in README |
-| 1.2.0   | 2023- 1-31 | Replace hardcoded NPM dependencies with tmeasday:check-npm-versions (runtime, development environment only) |
-| 1.1.0   | 2023- 1-30 | make miDialog draggable if jQuery UI is present |
-|         |            | rename global object to miModalInfo |
-| 1.0.0   | 2023- 1-29 | Initial release |
+## ChangeLog
+
+### 1.4.0-rc
+
+    Release date: 
+
+    - Bump pwix:modal requirement to v 1.6.0
+    - Rename ModalInfo global export to ModalInfo
+
+### 1.3.0
+
+    Release date: 2023- 5-29
+
+    - Now relies on pwix:modal package (todo #2)
+
+### 1.2.1
+
+    Release date: 2023- 4-30
+
+    - Be more tolerant about language specification
+    - Add miDialog screenshot in README
+
+### 1.2.0
+
+    Release date: 2023- 1-31
+
+    - Replace hardcoded NPM dependencies with tmeasday:check-npm-versions (runtime, development environment only)
+
+### 1.1.0
+
+    Release date: 2023- 1-30
+
+    - make miDialog draggable if jQuery UI is present
+    - rename global object to ModalInfo
+
+### 1.0.0
+
+    Release date: 2023- 1-29
+
+    - Initial release
 
 ---
 P. Wieser

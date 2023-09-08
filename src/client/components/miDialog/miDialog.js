@@ -10,7 +10,7 @@
  */
 
 import { pwixI18n } from 'meteor/pwix:i18n';
-import { pwixModal } from 'meteor/pwix:modal';
+import { Modal } from 'meteor/pwix:modal';
 
 import '../../../common/js/index.js';
 
@@ -57,8 +57,8 @@ Template.miDialog.onCreated( function(){
     });
 
     // and run the dialog
-    pwixModal.run({
-        mdTitle: self.MI.title.get() || pwixI18n.label( miModalInfo.strings, 'dialog.informations' ),
+    Modal.run({
+        mdTitle: self.MI.title.get() || pwixI18n.label( ModalInfo.strings, 'dialog.informations' ),
         mdBody: 'miPanel',
         mdButtons: [ MD_BUTTON_CLOSE ],
         // parameters targeting the miPanel component

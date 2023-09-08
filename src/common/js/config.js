@@ -2,9 +2,9 @@
  * pwix:modal-info/src/common/js/config.js
  */
 
-//console.log( 'pwix:modal-info/src/common/js/config.js defining globally exported miModalInfo object' );
+//console.log( 'pwix:modal-info/src/common/js/config.js defining globally exported ModalInfo object' );
 
-miModalInfo = {
+ModalInfo = {
 
     // client-specific data and functions
     client: {},
@@ -15,8 +15,8 @@ miModalInfo = {
     // should be *in same terms* called both by the client and the server
     configure: function( o ){
         console.log( 'pwix:modal-info configure() with', o );
-        miModalInfo.conf = {
-            ...miModalInfo.conf,
+        ModalInfo.conf = {
+            ...ModalInfo.conf,
             ...o
         };
     },

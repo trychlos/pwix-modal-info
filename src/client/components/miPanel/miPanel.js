@@ -81,7 +81,7 @@ Template.miPanel.helpers({
         return this.name;
     },
     namespace(){
-        return miModalInfo.strings;
+        return ModalInfo.strings;
     },
     updatedAt(){
         return i18n.dateTime( this.object.updatedAt );

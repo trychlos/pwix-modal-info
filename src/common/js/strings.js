@@ -2,7 +2,7 @@
  * pwix:modal-info/src/common/js/strings.js
  */
 
-miModalInfo.strings = {
+ModalInfo.strings = {
     en_US: {
         button: {
             informations: 'Informations about "%s"'
@@ -38,5 +38,5 @@ miModalInfo.strings = {
 };
 
 // actually a package should only provide these short language fallbacks
-miModalInfo.strings.en = miModalInfo.strings.en_US;
-miModalInfo.strings.fr = miModalInfo.strings.fr_FR;
+ModalInfo.strings.en = ModalInfo.strings.en_US;
+ModalInfo.strings.fr = ModalInfo.strings.fr_FR;
