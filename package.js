@@ -23,12 +23,12 @@ Package.onTest( function( api ){
 });
 
 function configure( api ){
-    api.versionsFrom( '2.9.0' );
+    api.versionsFrom( '2.13.2' );
     api.use( 'blaze-html-templates@2.0.0', 'client' );
     api.use( 'ecmascript' );
     api.use( 'less@4.0.0', 'client' );
-    api.use( 'pwix:i18n@1.0.0', 'client' );
-    api.use( 'pwix:modal@1.6.0', 'client' );
+    api.use( 'pwix:i18n@1.5.0', 'client' );
+    api.use( 'pwix:modal@1.7.0', 'client' );
     api.use( 'tmeasday:check-npm-versions@1.0.2', 'server' );
     api.addFiles( 'src/client/components/miButton/miButton.js', 'client' );
     api.addFiles( 'src/client/components/miDialog/miDialog.js', 'client' );
