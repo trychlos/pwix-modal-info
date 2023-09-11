@@ -49,17 +49,6 @@ Known parameters are:
 - name: the name to be displayed at the top of the object informations, defaulting to nothing
 - object: (mandatory) the object to be displayed.
 
-#### miDialog
-
-The modal dialog itself.
-
-Accepted parameters are:
-- title: the title of the dialog, defaulting to 'Informations'
-- name: a name to be displayed on the first row, defaulting to an empty string
-- object: (mandatory) the object to be displayed.
-
-_Note_: the package is cool enough to destroy itself the Blaze created view on dialog close. So you don't have to take care about that.
-
 ![Informations](/maintainer/png/informations.png)
 
 ## Server-side

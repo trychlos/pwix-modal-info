@@ -31,7 +31,6 @@ function configure( api ){
     api.use( 'pwix:modal@1.7.0', 'client' );
     api.use( 'tmeasday:check-npm-versions@1.0.2', 'server' );
     api.addFiles( 'src/client/components/miButton/miButton.js', 'client' );
-    api.addFiles( 'src/client/components/miDialog/miDialog.js', 'client' );
     api.addFiles( 'src/client/components/miPanel/miPanel.js', 'client' );
 }
 
