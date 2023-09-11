@@ -2,25 +2,31 @@
  * pwix:modal-info/src/common/js/config.js
  */
 
-//console.log( 'pwix:modal-info/src/common/js/config.js defining globally exported ModalInfo object' );
+import _ from 'lodash';
 
-ModalInfo = {
+ModalInfo._conf = {};
 
-    // client-specific data and functions
-    client: {},
+ModalInfo._defaults = {};
 
-    // package configuration
-    conf: {},
+/**
+ * @summary Package configuration
+ *  Should be called *in same terms* both by the client and the server.
+ * @locus Anywhere
+ * @param {Object} o the runtime configuration of the package
+ * @returns {Object} the package configuration
+ */
+ModalInfo.configure = function( o ){
+    if( o && _.isObject( o )){
+        _.merge( ModalInfo._conf, ModalInfo._defaults, o );
+        // be verbose if asked for
+        /*
+        if( ModalInfo._conf.verbosity & ModalInfo.C.Verbose.CONFIGURE ){
+            console.log( 'pwix:modal-info configure() with', o, 'building', ModalInfo._conf );
+        }
+        */
+    }
+    // also acts as a getter
+    return ModalInfo._conf;
+}
 
-    // should be *in same terms* called both by the client and the server
-    configure: function( o ){
-        console.log( 'pwix:modal-info configure() with', o );
-        ModalInfo.conf = {
-            ...ModalInfo.conf,
-            ...o
-        };
-    },
-
-    // server-specific data and functions
-    server: {}
-};
+_.merge( ModalInfo._conf, ModalInfo._defaults );
