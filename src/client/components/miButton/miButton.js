@@ -4,19 +4,22 @@
  * A button which will trigger the modal dialog.
  * 
  * Parms:
- *  - titleButton: the title attached to the button, defaulting to 'Informations'
- *  - titleDialog: the title of the to-be-opened dialog, defaulting to 'Informations'
- *  - name: the name to be displayed at the top of the object informations, defaulting to nothing
- *  - object: the object to be displayed
+ *  - see README.md
  */
 
 import { pwixI18n } from 'meteor/pwix:i18n';
+import { Modal } from 'meteor/pwix:modal';
 
-import '../miDialog/miDialog.js';
+import '../miPanel/miPanel.js';
 
 import './miButton.html';
 
 Template.miButton.helpers({
+    // classes
+    classes(){
+        return Template.currentData().classButton || 'btn-sm btn-primary';
+    },
+
     // a title for the button
     titleButton(){
         return this.titleButton ? this.titleButton : pwixI18n.label( ModalInfo.strings, 'button.informations', this.name || this.object._id );
@@ -26,10 +29,12 @@ Template.miButton.helpers({
 Template.miButton.events({
     // open the dialog
     'click button.js-info'( event, instance ){
-        Blaze.renderWithData( Template.miDialog, {
-            object: Template.currentData().object,
-            name: Template.currentData().name,
-            title: Template.currentData().titleDialog
-        }, $( 'body' )[0] );
+        Modal.run({
+            mdTitle: Template.currentData().titleDialog || pwixI18n.label( I18N, 'dialog.informations' ),
+            mdBody: 'miPanel',
+            mdButtons: [ Modal.C.Button.CLOSE ],
+            // parameters targeting the miPanel component
+            ... Template.currentData()
+        });
     }
 });

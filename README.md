@@ -27,17 +27,25 @@ None at the moment.
 
 Just a button which will triggers the dialog opening with the attached object.
 
-Accepted parameters are:
+Known parameters are:
+
 - titleButton: the title attached to the button, defaulting to 'Informations about &lt;name&gt;'
+
+- classButton: the classes to be set on the button instead of the `btn-sm btn-primary` default
+
 - titleDialog: the title of the to-be-opened dialog, defaulting to 'Informations'
+
 - name: the name to be displayed at the top of the object informations, defaulting to nothing
+
 - object: (mandatory) the object to be displayed.
+
+Please note that all the parameters will always be passed to the `miDialog`, and then to the `miPanel`, templates. We are so able to add here as many as `pwix:modal` parameters as you want.
 
 #### miPanel
 
 The display panel as an independant component. You are so able to integrate it into your own page.
 
-Accepted parameters are:
+Known parameters are:
 - name: the name to be displayed at the top of the object informations, defaulting to nothing
 - object: (mandatory) the object to be displayed.
 
@@ -67,10 +75,6 @@ Only requested fields are:
 - updatedBy
 
 This is needed because we want display the email of the user responsible of the reaction (resp. the last update) of the displayed object.
-
-## Draggable dialogs
-
-This package can take advantage of the jQuery UI resources. If it happens that your application already has this jQuery UI dependency, then `pwix:modal-info` will benefit of that, and make the modal dialogs draggable. Isn't fun ?
 
 ## NPM peer dependencies
 
