@@ -50,6 +50,8 @@ Template.miPanel.onCreated( function(){
             }
         }
     });
+
+    //console.debug( Template.currentData());
 });
 
 Template.miPanel.helpers({
@@ -66,7 +68,8 @@ Template.miPanel.helpers({
         return Object.keys( this.object ).includes( 'createdBy' );
     },
     hasName(){
-        return Object.keys( this.object ).includes( 'name' );
+        //console.debug( this );
+        return Object.keys( this ).includes( 'name' );
     },
     hasUpdatedAt(){
         return Object.keys( this.object ).includes( 'updatedAt' );

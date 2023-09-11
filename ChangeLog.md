@@ -12,6 +12,7 @@
     - Define ModalInfo.i18n.namespace() (todo #4)
     - Define classButton parameter (todo #5)
     - Remove (useless) miDialog component
+    - Fix not displayed name
 
 ### 1.3.0
 
