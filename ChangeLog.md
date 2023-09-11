@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.4.0-rc
+### 1.4.0
 
-    Release date: 
+    Release date: 2023- 9-11
 
     - Bump pwix:modal requirement to v 1.6.0
     - Rename ModalInfo global export to ModalInfo
@@ -48,4 +48,4 @@
 
 ---
 P. Wieser
-- Last updated on 2023, May 29th
+- Last updated on 2023, Sept. 11th

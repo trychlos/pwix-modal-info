@@ -85,4 +85,4 @@ New and updated translations are willingly accepted, and more than welcome. Just
 
 ---
 P. Wieser
-- Last updated on 2023, May 29th
+- Last updated on 2023, Sept. 11th
