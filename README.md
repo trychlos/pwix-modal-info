@@ -21,6 +21,12 @@ None at the moment.
 
 `ModalInfo`
 
+### Methods
+
+#### `ModalInfo.i18n.namespace()`
+
+Returns the i18n namespace of the package.
+
 ### Blaze components
 
 #### miButton
