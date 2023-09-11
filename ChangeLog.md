@@ -9,6 +9,7 @@
     - Bump pwix:modal requirement to v 1.6.0
     - Rename ModalInfo global export to ModalInfo
     - Bump version requirements: Meteor to 2.13.2, pwix:i18n to 1.5, pwix:modal to 1.7
+    - Define ModalInfo.i18n.namespace() (todo #4)
 
 ### 1.3.0
 

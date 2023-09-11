@@ -1,8 +1,10 @@
 /*
- * pwix:modal-info/src/common/js/strings.js
+ * pwix:modal-info/src/common/js/i18n.js
  */
 
-ModalInfo.strings = {
+import { pwixI18n } from 'meteor/pwix:i18n';
+
+ModalInfo.i18n = {
     en_US: {
         button: {
             informations: 'Informations about "%s"'
@@ -38,5 +40,14 @@ ModalInfo.strings = {
 };
 
 // actually a package should only provide these short language fallbacks
-ModalInfo.strings.en = ModalInfo.strings.en_US;
-ModalInfo.strings.fr = ModalInfo.strings.fr_FR;
+ModalInfo.i18n.en = ModalInfo.i18n.en_US;
+ModalInfo.i18n.fr = ModalInfo.i18n.fr_FR;
+
+pwixI18n.namespace( I18N, ModalInfo.i18n );
+
+/**
+ * @returns {String} the i18n namespace of the package
+ */
+ModalInfo.i18n.namespace = function(){
+    return I18N;
+};

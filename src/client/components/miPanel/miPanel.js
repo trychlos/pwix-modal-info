@@ -8,7 +8,7 @@
  *  - object: the object to be displayed
  */
 
-import { pwixI18n as i18n } from 'meteor/pwix:i18n';
+import { pwixI18n } from 'meteor/pwix:i18n';
 
 import '../../../common/js/index.js';
 
@@ -54,7 +54,7 @@ Template.miPanel.onCreated( function(){
 
 Template.miPanel.helpers({
     createdAt(){
-        return i18n.dateTime( this.object.createdAt );
+        return pwixI18n.dateTime( this.object.createdAt );
     },
     createdBy(){
         return Template.instance().MI.createdBy.get();
@@ -74,17 +74,17 @@ Template.miPanel.helpers({
     hasUpdatedBy(){
         return Object.keys( this.object ).includes( 'updatedBy' );
     },
+    i18n( arg ){
+        return pwixI18n.label( I18N, arg.hash.key );
+    },
     id(){
         return this.object._id;
     },
     name(){
         return this.name;
     },
-    namespace(){
-        return ModalInfo.strings;
-    },
     updatedAt(){
-        return i18n.dateTime( this.object.updatedAt );
+        return pwixI18n.dateTime( this.object.updatedAt );
     },
     updatedBy(){
         return Template.instance().MI.updatedBy.get();

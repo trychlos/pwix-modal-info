@@ -3,6 +3,7 @@
  */
 
 import './global.js';
+import './constants.js';
 //
 import './config.js';
-import './strings.js';
+import './i18n.js';

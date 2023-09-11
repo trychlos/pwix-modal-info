@@ -10,7 +10,7 @@
  *  - object: the object to be displayed
  */
 
-import { pwixI18n as i18n } from 'meteor/pwix:i18n';
+import { pwixI18n } from 'meteor/pwix:i18n';
 
 import '../miDialog/miDialog.js';
 
@@ -19,7 +19,7 @@ import './miButton.html';
 Template.miButton.helpers({
     // a title for the button
     titleButton(){
-        return this.titleButton ? this.titleButton : i18n.label( ModalInfo.strings, 'button.informations', this.name || this.object._id );
+        return this.titleButton ? this.titleButton : pwixI18n.label( ModalInfo.strings, 'button.informations', this.name || this.object._id );
     }
 });
 

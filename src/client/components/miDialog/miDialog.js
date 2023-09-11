@@ -58,7 +58,7 @@ Template.miDialog.onCreated( function(){
 
     // and run the dialog
     Modal.run({
-        mdTitle: self.MI.title.get() || pwixI18n.label( ModalInfo.strings, 'dialog.informations' ),
+        mdTitle: self.MI.title.get() || pwixI18n.label( I18N, 'dialog.informations' ),
         mdBody: 'miPanel',
         mdButtons: [ Modal.C.Button.CLOSE ],
         // parameters targeting the miPanel component
