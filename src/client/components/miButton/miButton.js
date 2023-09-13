@@ -17,7 +17,7 @@ import './miButton.html';
 Template.miButton.helpers({
     // classes
     classes(){
-        return Template.currentData().classButton || 'btn-sm btn-primary';
+        return this.classButton || 'btn-sm btn-primary';
     },
 
     // a title for the button
@@ -30,11 +30,11 @@ Template.miButton.events({
     // open the dialog
     'click button.js-info'( event, instance ){
         Modal.run({
-            mdTitle: Template.currentData().titleDialog || pwixI18n.label( I18N, 'dialog.informations' ),
+            mdTitle: this.titleDialog || pwixI18n.label( I18N, 'dialog.informations' ),
             mdBody: 'miPanel',
             mdButtons: [ Modal.C.Button.CLOSE ],
             // parameters targeting the miPanel component
-            ... Template.currentData()
+            ...this
         });
     }
 });

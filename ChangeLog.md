@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - Use 'this' instead of Template.currentData() in helpers and events
 
 ### 1.4.1
 
