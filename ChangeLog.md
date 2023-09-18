@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - Fix the miButton title translation
 
 ### 1.4.2
 
