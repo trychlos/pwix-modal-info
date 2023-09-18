@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.4.2-rc
+### 1.4.2
 
-    Release date: 
+    Release date: 2023- 9-18
 
     - Use 'this' instead of Template.currentData() in helpers and events
     - Bump pwix:modal requirement to v 1.8.0
@@ -61,4 +61,4 @@
 
 ---
 P. Wieser
-- Last updated on 2023, Sept. 12th
+- Last updated on 2023, Sep. 18th
