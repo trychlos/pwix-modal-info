@@ -7,6 +7,7 @@
     Release date: 
 
     - Fix the miButton title translation
+    - Display the user identifier if the document is not found in users collection
 
 ### 1.4.2
 

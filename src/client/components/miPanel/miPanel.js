@@ -33,6 +33,8 @@ Template.miPanel.onCreated( function(){
                 const user = Meteor.users.findOne({ _id: obj.createdBy });
                 if( user ){
                     self.MI.createdBy.set( user.emails[0].address );
+                } else {
+                    self.MI.createdBy.set( obj.createdBy );
                 }
             }
         }
@@ -43,9 +45,11 @@ Template.miPanel.onCreated( function(){
         if( self.MI.handle.ready()){
             const obj = Template.currentData().object;
             if( obj && obj.updatedBy ){
-                const user = Meteor.users.findOne({ _id: self.data.object.updatedBy });
+                const user = Meteor.users.findOne({ _id: obj.updatedBy });
                 if( user ){
                     self.MI.updatedBy.set( user.emails[0].address );
+                } else {
+                    self.MI.updatedBy.set( obj.updatedBy );
                 }
             }
         }
