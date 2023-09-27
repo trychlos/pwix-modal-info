@@ -52,7 +52,9 @@ Please note that all the parameters will always be passed to the `miDialog`, and
 The display panel as an independant component. You are so able to integrate it into your own page.
 
 Known parameters are:
+
 - name: the name to be displayed at the top of the object informations, defaulting to nothing
+
 - object: (mandatory) the object to be displayed.
 
 ![Informations](/maintainer/png/informations.png)
