@@ -45,7 +45,7 @@ Known parameters are:
 
 - object: (mandatory) the object to be displayed.
 
-Please note that all the parameters will always be passed to the `miDialog`, and then to the `miPanel`, templates. We are so able to add here as many as `pwix:modal` parameters as you want.
+Please note that all the parameters will always be passed to the `Modal.run()` function, and then to the `miPanel` template. We are so able to add here as many `pwix:modal` parameters as you want.
 
 #### miPanel
 
