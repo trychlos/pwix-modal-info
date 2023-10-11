@@ -8,6 +8,7 @@
 
     - Fix the miButton title translation
     - Display the user identifier if the document is not found in users collection
+    - No more publish 'users' collection, relying instead on pwix:accounts-tools package (todo #7)
 
 ### 1.4.2
 

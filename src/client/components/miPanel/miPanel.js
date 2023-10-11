@@ -8,6 +8,7 @@
  *  - object: the object to be displayed
  */
 
+import { AccountsTools } from 'meteor/pwix:accounts-tools';
 import { pwixI18n } from 'meteor/pwix:i18n';
 
 import '../../../common/js/index.js';
@@ -19,43 +20,18 @@ import './miPanel.html';
 Template.miPanel.onCreated( function(){
     const self = this;
 
-    self.MI = {
-        createdBy: new ReactiveVar( null ),
-        updatedBy: new ReactiveVar( null ),
-        handle: self.subscribe( 'miUsers' )
-    };
-
-    // get the responsible of the creation
+    // get the responsible of the creation (resp. the last update)
     self.autorun(() => {
-        if( self.MI.handle.ready()){
-            const obj = Template.currentData().object;
-            if( obj && obj.createdBy ){
-                const user = Meteor.users.findOne({ _id: obj.createdBy });
-                if( user ){
-                    self.MI.createdBy.set( user.emails[0].address );
-                } else {
-                    self.MI.createdBy.set( obj.createdBy );
-                }
-            }
+        const obj = Template.currentData().object;
+        if( obj && obj.createdBy ){
+            obj.createdByRV = AccountsTools.preferredLabelRV( obj.createdBy, AccountsTools.C.PreferredLabel.EMAIL_ADDRESS );
+        }
+        if( obj && obj.updatedBy ){
+            obj.updatedByRV = AccountsTools.preferredLabelRV( obj.updatedBy, AccountsTools.C.PreferredLabel.EMAIL_ADDRESS );
         }
     });
 
-    // get the responsible of the last update
-    self.autorun(() => {
-        if( self.MI.handle.ready()){
-            const obj = Template.currentData().object;
-            if( obj && obj.updatedBy ){
-                const user = Meteor.users.findOne({ _id: obj.updatedBy });
-                if( user ){
-                    self.MI.updatedBy.set( user.emails[0].address );
-                } else {
-                    self.MI.updatedBy.set( obj.updatedBy );
-                }
-            }
-        }
-    });
-
-    //console.debug( Template.currentData());
+    console.debug( Template.currentData());
 });
 
 Template.miPanel.helpers({
@@ -63,7 +39,7 @@ Template.miPanel.helpers({
         return pwixI18n.dateTime( this.object.createdAt );
     },
     createdBy(){
-        return Template.instance().MI.createdBy.get();
+        return this.object.createdByRV.get().label;
     },
     hasCreatedAt(){
         return Object.keys( this.object ).includes( 'createdAt' );
@@ -94,6 +70,6 @@ Template.miPanel.helpers({
         return pwixI18n.dateTime( this.object.updatedAt );
     },
     updatedBy(){
-        return Template.instance().MI.updatedBy.get();
+        return this.object.updatedByRV.get().label;
     }
 });
