@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.4.3-rc
+### 1.4.3
 
-    Release date: 
+    Release date: 2023-10-11
 
     - Fix the miButton title translation
     - Display the user identifier if the document is not found in users collection
@@ -69,4 +69,4 @@
 
 ---
 P. Wieser
-- Last updated on 2023, Sep. 18th
+- Last updated on 2023, Oct. 11th
