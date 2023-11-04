@@ -31,7 +31,7 @@ Template.miPanel.onCreated( function(){
         }
     });
 
-    console.debug( Template.currentData());
+    //console.debug( Template.currentData());
 });
 
 Template.miPanel.helpers({
