@@ -7,7 +7,8 @@ import { pwixI18n } from 'meteor/pwix:i18n';
 ModalInfo.i18n = {
     en_US: {
         button: {
-            informations: 'Informations about "%s"'
+            informations: 'Informations about "%s"',
+            none: '<none>'
         },
         dialog: {
             close: 'Close',
@@ -23,7 +24,8 @@ ModalInfo.i18n = {
     },
     fr_FR: {
         button: {
-            informations: 'Informations sur "%s"'
+            informations: 'Informations sur "%s"',
+            none: '<néant>'
         },
         dialog: {
             close: 'Fermer',

@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - miButton: have a fallback if provided data is empty
 
 ### 1.4.3
 

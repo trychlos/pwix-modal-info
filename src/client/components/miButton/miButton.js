@@ -22,7 +22,7 @@ Template.miButton.helpers({
 
     // a title for the button
     titleButton(){
-        return this.titleButton ? this.titleButton : pwixI18n.label( I18N, 'button.informations', this.name || this.object._id );
+        return this.titleButton ? this.titleButton : pwixI18n.label( I18N, 'button.informations', this.name || this.object?._id || pwixI18n.label( I18N, 'button.none' ));
     }
 });
 
