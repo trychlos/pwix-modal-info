@@ -8,6 +8,7 @@
 
     - miButton: have a fallback if provided data is empty
     - Meteor 3.0 ready
+    - Update to new pwix:accounts-tools 2.0.0 API
 
 ### 1.4.3
 
