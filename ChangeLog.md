@@ -7,6 +7,7 @@
     Release date: 
 
     - miButton: have a fallback if provided data is empty
+    - Meteor 3.0 ready
 
 ### 1.4.3
 
