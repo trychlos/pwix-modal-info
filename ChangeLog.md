@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.4.4-rc
+### 1.4.4
 
-    Release date: 
+    Release date: 2024- 5-25
 
     - miButton: have a fallback if provided data is empty
     - Meteor 3.0 ready
@@ -77,4 +77,4 @@
 
 ---
 P. Wieser
-- Last updated on 2023, Oct. 11th
+- Last updated on 2024, May. 25th
