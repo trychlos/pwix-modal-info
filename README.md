@@ -59,19 +59,7 @@ Known parameters are:
 
 ![Informations](/maintainer/png/informations.png)
 
-## Server-side
-
-It could be useful to know that this package works by initializing a publication on `Meteor.users` collection for all records.
-
-Only requested fields are:
-- username
-- emails
-- createdAt
-- createdBy
-- updatedAt
-- updatedBy
-
-This is needed because we want display the email of the user responsible of the reaction (resp. the last update) of the displayed object.
+This package relies on `pwix:accounts-tools` to get the email address of the creator of the provided object.
 
 ## NPM peer dependencies
 
