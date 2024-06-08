@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.5.0-rc
+### 1.5.0
 
-    Release date: 
+    Release date: 2024- 6- 8
 
     - Doesn't try to display an unset identifier (todo #8)
     - Let the button be enabled/disabled by the caller (todo #6) bumping minor candidate version number
