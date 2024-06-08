@@ -9,5 +9,7 @@ if( false ){
 }
 
 checkNpmVersions({
+    'strftime': '^0.10.0'
 },
-    'pwix:modal-info' );
+    'pwix:modal-info'
+);

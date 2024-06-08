@@ -39,6 +39,9 @@ Known parameters are:
 
 - `classButton`: the classes to be set on the button instead of the `btn-sm btn-primary` default
 
+- `stampFormat`: the strftime format to be used to display the date,
+   defaulting to the `Intl.DateTimeFormat()` format corresponding to the current locale
+
 - `titleButton`: the title attached to the button, defaulting to 'Informations about &lt;name&gt;'
 
 - `titleDialog`: the title of the to-be-opened dialog, defaulting to 'Informations'

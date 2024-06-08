@@ -8,6 +8,8 @@
  *  - object: the object to be displayed
  */
 
+import strftime from 'strftime';
+
 import { AccountsTools } from 'meteor/pwix:accounts-tools';
 import { pwixI18n } from 'meteor/pwix:i18n';
 
@@ -36,6 +38,10 @@ Template.miPanel.onCreated( function(){
 
 Template.miPanel.helpers({
     createdAt(){
+        if( this.stampFormat ){
+            return strftime( this.stampFormat, this.object.createdAt );
+        }
+        // defaulting to Intl.DateTimeFormat for the current locale
         return pwixI18n.dateTime( this.object.createdAt );
     },
     createdBy(){
@@ -69,6 +75,10 @@ Template.miPanel.helpers({
         return this.name;
     },
     updatedAt(){
+        if( this.stampFormat ){
+            return strftime( this.stampFormat, this.object.createdAt );
+        }
+        // defaulting to Intl.DateTimeFormat for the current locale
         return pwixI18n.dateTime( this.object.updatedAt );
     },
     updatedBy(){

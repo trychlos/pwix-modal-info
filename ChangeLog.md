@@ -8,6 +8,7 @@
 
     - Doesn't try to display an unset identifier (todo #8)
     - Let the button be enabled/disabled by the caller (todo #6) bumping minor candidate version number
+    - Let the caller provide its own date/time format (todo #9), adding a strftime dependency
 
 ### 1.4.5
 

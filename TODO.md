@@ -11,7 +11,6 @@
 |   Id | Date       | Description and comment(s) |
 | ---: | :---       | :---                       |
 |    1 | 2022- 1-29 | be able to use another data source than Meteor.users, e.g. an external identity referential (aka an IAM) |
-|    9 | 2024- 6- 8 | let the caller configure the date and time format |
 |   10 |  |  |
 
 ---
@@ -32,6 +31,8 @@
 |    7 | 2023- 9-22 | should use method to get users name/email from the server rather than publishing all users to the client |
 |      | 2023-10-11 | done |
 |    8 | 2024- 1-10 | object identifier may be unset - so the label should not be displayed |
+|      | 2024- 6- 8 | done |
+|    9 | 2024- 6- 8 | let the caller configure the date and time format |
 |      | 2024- 6- 8 | done |
 
 ---
