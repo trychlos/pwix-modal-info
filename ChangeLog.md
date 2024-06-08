@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.4.5-rc
+### 1.4.5
 
-    Release date: 
+    Release date: 2024- 6- 8
 
     - Upgrade pwix:modal dependency
     - Add pwix:ui-fontawesome6 and pwix:ui-utils dependencies
@@ -84,4 +84,4 @@
 
 ---
 P. Wieser
-- Last updated on 2024, May. 25th
+- Last updated on 2024, Jun. 8th
