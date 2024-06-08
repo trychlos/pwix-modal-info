@@ -2,11 +2,12 @@
 
 ## ChangeLog
 
-### 1.4.6-rc
+### 1.5.0-rc
 
     Release date: 
 
     - Doesn't try to display an unset identifier (todo #8)
+    - Let the button be enabled/disabled by the caller (todo #6) bumping minor candidate version number
 
 ### 1.4.5
 

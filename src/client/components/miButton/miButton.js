@@ -20,6 +20,12 @@ Template.miButton.helpers({
         return this.classButton || 'btn-sm btn-primary';
     },
 
+    // whether the button is enabled ?
+    enabled(){
+        const enabled = Object.keys( this ).includes( 'enabled' ) ? this.enabled : true;
+        return enabled ? '' : 'disabled';
+    },
+
     // a title for the button
     titleButton(){
         return this.titleButton ? this.titleButton : pwixI18n.label( I18N, 'button.informations', this.name || this.object?._id || pwixI18n.label( I18N, 'button.none' ));

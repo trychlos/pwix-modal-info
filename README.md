@@ -35,15 +35,17 @@ Just a button which will triggers the dialog opening with the attached object.
 
 Known parameters are:
 
-- titleButton: the title attached to the button, defaulting to 'Informations about &lt;name&gt;'
+- `enabled`: whether the button should be enabled, defaulting to true
 
-- classButton: the classes to be set on the button instead of the `btn-sm btn-primary` default
+- `classButton`: the classes to be set on the button instead of the `btn-sm btn-primary` default
 
-- titleDialog: the title of the to-be-opened dialog, defaulting to 'Informations'
+- `titleButton`: the title attached to the button, defaulting to 'Informations about &lt;name&gt;'
 
-- name: the name to be displayed at the top of the object informations, defaulting to nothing
+- `titleDialog`: the title of the to-be-opened dialog, defaulting to 'Informations'
 
-- object: (mandatory) the object to be displayed.
+- `name`: the name to be displayed at the top of the object informations, defaulting to nothing
+
+- `object`: (mandatory) the object to be displayed.
 
 Please note that all the parameters will always be passed to the `Modal.run()` function, and then to the `miPanel` template. We are so able to add here as many `pwix:modal` parameters as you want.
 
