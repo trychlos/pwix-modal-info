@@ -7,6 +7,7 @@
     Release date: 
 
     - Upgrade pwix:modal dependency
+    - Add pwix:ui-fontawesome6 and pwix:ui-utils dependencies
 
 ### 1.4.4
 
