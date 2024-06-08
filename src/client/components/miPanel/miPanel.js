@@ -47,8 +47,10 @@ Template.miPanel.helpers({
     hasCreatedBy(){
         return Object.keys( this.object ).includes( 'createdBy' );
     },
+    hasId(){
+        return Object.keys( this.object ).includes( '_id' );
+    },
     hasName(){
-        //console.debug( this );
         return Object.keys( this ).includes( 'name' );
     },
     hasUpdatedAt(){

@@ -31,10 +31,12 @@
                     <td>{{ updatedBy }}</td>
                 </tr>
             {{/if}}
-            <tr>
-                <td class="mi-right mi-col1 mi-right">{{ i18n key="panel.identifier" }}</td>
-                <td>{{ id }}</td>
-            </tr>
+            {{#if hasId }}
+                <tr>
+                    <td class="mi-right mi-col1 mi-right">{{ i18n key="panel.identifier" }}</td>
+                    <td>{{ id }}</td>
+                </tr>
+            {{/if}}
         </table>
 
     </div>

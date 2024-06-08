@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - Doesn't try to display an unset identifier (todo #8)
 
 ### 1.4.5
 
