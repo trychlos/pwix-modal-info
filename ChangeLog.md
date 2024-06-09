@@ -7,6 +7,7 @@
     Release date: 
 
     - Remove pwix:ui-utils dependency
+    - Add (missing) pwix:ui-bootstrap5 dependency
 
 ### 1.6.0
 
