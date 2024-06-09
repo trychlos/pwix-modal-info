@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - Remove pwix:ui-utils dependency
 
 ### 1.6.0
 
