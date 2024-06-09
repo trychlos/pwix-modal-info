@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.6.0-rc
+### 1.6.0
 
-    Release date: 
+    Release date: 2024- 6- 9
 
     - Let new 'enabled' parameter be a function, bumping minor candidate version number
 
@@ -98,4 +98,4 @@
 
 ---
 P. Wieser
-- Last updated on 2024, Jun. 8th
+- Last updated on 2024, Jun. 9th
