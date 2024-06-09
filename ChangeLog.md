@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.6.1-rc
+### 1.6.1
 
-    Release date: 
+    Release date: 2024- 6- 9
 
     - Remove pwix:ui-utils dependency
     - Add (missing) pwix:ui-bootstrap5 dependency
