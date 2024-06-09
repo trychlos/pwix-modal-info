@@ -1,6 +1,6 @@
 Package.describe({
     name: 'pwix:modal-info',
-    version: '1.6.1',
+    version: '1.6.2-rc',
     summary: 'A Bootstrap-based Meteor package which displays object informations in a modal dialog',
     git: 'https://github.com/trychlos/pwix-modal-info',
     documentation: 'README.md'
