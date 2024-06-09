@@ -2,11 +2,11 @@
 
 ## ChangeLog
 
-### 1.5.1-rc
+### 1.6.0-rc
 
     Release date: 
 
-    - 
+    - Let new 'enabled' parameter be a function, bumping minor candidate version number
 
 ### 1.5.0
 

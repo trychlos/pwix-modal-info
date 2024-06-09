@@ -22,7 +22,8 @@ Template.miButton.helpers({
 
     // whether the button is enabled ?
     enabled(){
-        const enabled = Object.keys( this ).includes( 'enabled' ) ? this.enabled : true;
+        let enabled = Object.keys( this ).includes( 'enabled' ) ? this.enabled : true;
+        enabled = ( typeof enabled === 'function' ) ? enabled( this ) : enabled;
         return enabled ? '' : 'disabled';
     },
 

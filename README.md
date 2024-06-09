@@ -35,7 +35,7 @@ Just a button which will triggers the dialog opening with the attached object.
 
 Known parameters are:
 
-- `enabled`: whether the button should be enabled, defaulting to true
+- `enabled`: whether the button should be enabled, defaulting to true, or a function which will receive these same parameters, and must return such a true|false value
 
 - `classButton`: the classes to be set on the button instead of the `btn-sm btn-primary` default
 
