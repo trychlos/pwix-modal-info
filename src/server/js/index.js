@@ -3,5 +3,3 @@
  */
 
 import '../../common/js/index.js';
-
-import './publish.js';
