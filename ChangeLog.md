@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.7.0-rc
+### 1.7.0
 
-    Release date:
+    Release date: 2024- 6-30
 
     - Accept that provided object be a function which returns the object, bumping minor candidate version number
 
@@ -111,4 +111,4 @@
 
 ---
 P. Wieser
-- Last updated on 2024, Jun. 9th
+- Last updated on 2024, Jun. 30th
