@@ -2,7 +2,7 @@
  * /src/client/components/miButton/miButton.js
  *
  * A button which will trigger the modal dialog.
- * 
+ *
  * Parms:
  *  - see README.md
  */
@@ -36,12 +36,19 @@ Template.miButton.helpers({
 Template.miButton.events({
     // open the dialog
     'click button.js-info'( event, instance ){
-        Modal.run({
-            mdTitle: this.titleDialog || pwixI18n.label( I18N, 'dialog.informations' ),
-            mdBody: 'miPanel',
-            mdButtons: [ Modal.C.Button.CLOSE ],
-            // parameters targeting the miPanel component
-            ...this
+        let dc = this;
+        let promises = [];
+        if( this instanceof Promise ){
+            promises.push( this.then(( res ) => { dc = res; return res; }));
+        }
+        Promise.allSettled( promises ).then(() => {
+            Modal.run({
+                mdTitle: this.titleDialog || pwixI18n.label( I18N, 'dialog.informations' ),
+                mdBody: 'miPanel',
+                mdButtons: [ Modal.C.Button.CLOSE ],
+                // parameters targeting the miPanel component
+                ...dc
+            });
         });
     }
 });

@@ -2,11 +2,11 @@
 
 ## ChangeLog
 
-### 1.6.2-rc
+### 1.7.0-rc
 
-    Release date: 
+    Release date:
 
-    - 
+    - Accept that provided object be a function which returns the object, bumping minor candidate version number
 
 ### 1.6.1
 

@@ -48,7 +48,7 @@ Known parameters are:
 
 - `name`: the name to be displayed at the top of the object informations, defaulting to nothing
 
-- `object`: (mandatory) the object to be displayed.
+- `object`: (mandatory) the object to be displayed, or a function which returns such an object.
 
 Please note that all the parameters will always be passed to the `Modal.run()` function, and then to the `miPanel` template. We are so able to add here as many `pwix:modal` parameters as you want.
 
@@ -60,15 +60,17 @@ Known parameters are:
 
 - name: the name to be displayed at the top of the object informations, defaulting to nothing
 
-- object: (mandatory) the object to be displayed.
+- object: (mandatory) the object to be displayed, or a function which returns such an object.
 
 ![Informations](/maintainer/png/informations.png)
 
-This package relies on `pwix:accounts-tools` to get the email address of the creator of the provided object.
+The function has following prototype: `async fn( <Object>) : Object`, and is called with the current data context.
+
+This package relies on `pwix:accounts-tools` to get the email address (resp. the username) of the creator/last updator of the provided object.
 
 ## NPM peer dependencies
 
-Starting with v 1.1.0, and in accordance with advices from [the Meteor Guide](https://guide.meteor.com/writing-atmosphere-packages.html#peer-npm-dependencies), we no more hardcode NPM dependencies in the `Npm.depends` clause of the `package.js`. 
+Starting with v 1.1.0, and in accordance with advices from [the Meteor Guide](https://guide.meteor.com/writing-atmosphere-packages.html#peer-npm-dependencies), we no more hardcode NPM dependencies in the `Npm.depends` clause of the `package.js`.
 
 Instead we check npm versions of installed packages at runtime, on server startup, in development environment.
 
