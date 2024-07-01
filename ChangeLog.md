@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.8.0-rc
+### 1.8.0
 
-    Release date:
+    Release date: 2024- 7- 1
 
     - Introduce trace and configure modules, bumping minor candidate version number
     - Have a default label when user identifier is zero (todo #10)
