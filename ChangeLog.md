@@ -4,9 +4,9 @@
 
 ### 1.9.1-rc
 
-    Release date: 
+    Release date:
 
-    - 
+    - Modify the configure() verbose message to be consistent with other packages
 
 ### 1.9.0
 

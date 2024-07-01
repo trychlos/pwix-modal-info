@@ -25,7 +25,7 @@ ModalInfo.configure = function( o ){
     if( o && _.isObject( o )){
         _.merge( _conf, ModalInfo._defaults, o );
         ModalInfo._conf.set( _conf );
-        _verbose( ModalInfo.C.Verbose.CONFIGURE, 'pwix:ModalInfo configure() with', o );
+        _verbose( ModalInfo.C.Verbose.CONFIGURE, 'pwix:modal-info configure() with', o );
     }
     // also acts as a getter
     return ModalInfo._conf.get();
