@@ -2,11 +2,11 @@
 
 ## ChangeLog
 
-### 1.7.2-rc
+### 1.8.0-rc
 
-    Release date: 
+    Release date:
 
-    - 
+    - Introduce trace and configure modules, bumping minor candidate version number
 
 ### 1.7.1
 
