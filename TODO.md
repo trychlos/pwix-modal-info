@@ -10,7 +10,8 @@
 
 |   Id | Date       | Description and comment(s) |
 | ---: | :---       | :---                       |
-|   10 |  |  |
+|   10 | 2024- 7- 1 | Have a label for created/updated by id=0 first created user |
+|   11 |  |  |
 
 ---
 ## Done

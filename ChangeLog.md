@@ -4,9 +4,9 @@
 
 ### 1.7.1-rc
 
-    Release date: 
+    Release date:
 
-    - 
+    - Fix display of last update date and time
 
 ### 1.7.0
 

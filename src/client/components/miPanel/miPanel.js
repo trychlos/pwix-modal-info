@@ -62,10 +62,7 @@ Template.miPanel.helpers({
     },
     createdBy(){
         const obj = Template.instance().MI.object.get();
-        if( !obj ){
-            return '';
-        }
-        return obj.createdByRV.get().label;
+        return obj && obj.createdBy ? obj.createdByRV.get().label : '';
     },
     hasCreatedAt(){
         const obj = Template.instance().MI.object.get();
@@ -124,16 +121,13 @@ Template.miPanel.helpers({
             return '';
         }
         if( this.stampFormat ){
-            return strftime( this.stampFormat, obj.createdAt );
+            return strftime( this.stampFormat, obj.updatedAt );
         }
         // defaulting to Intl.DateTimeFormat for the current locale
         return pwixI18n.dateTime( obj.updatedAt );
     },
     updatedBy(){
         const obj = Template.instance().MI.object.get();
-        if( !obj ){
-            return '';
-        }
-        return obj.updatedByRV.get().label;
+        return  obj && obj.updatedBy ? obj.updatedByRV.get().label : '';
     }
 });
