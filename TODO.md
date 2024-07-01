@@ -10,7 +10,6 @@
 
 |   Id | Date       | Description and comment(s) |
 | ---: | :---       | :---                       |
-|   10 | 2024- 7- 1 | Have a label for created/updated by id=0 first created user |
 |   11 |  |  |
 
 ---
@@ -36,6 +35,8 @@
 |      | 2024- 6- 8 | done |
 |    9 | 2024- 6- 8 | let the caller configure the date and time format |
 |      | 2024- 6- 8 | done |
+|   10 | 2024- 7- 1 | Have a label for created/updated by id=0 first created user |
+|      | 2024- 7- 1 | done |
 
 ---
 P. Wieser

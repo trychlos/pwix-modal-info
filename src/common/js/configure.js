@@ -11,6 +11,7 @@ let _conf = {};
 ModalInfo._conf = new ReactiveVar( _conf );
 
 ModalInfo._defaults = {
+    label_zero: '<System>',
     verbosity: ModalInfo.C.Verbose.CONFIGURE
 };
 

@@ -35,11 +35,19 @@ Template.miPanel.onCreated( function(){
             promises.push( obj( Template.currentData()).then(( res ) => { obj = res; return true; }));
         }
         Promise.allSettled( promises ).then(() => {
-            if( obj && obj.createdBy ){
-                obj.createdByRV = AccountsTools.preferredLabelRV( obj.createdBy, AccountsTools.C.PreferredLabel.EMAIL_ADDRESS );
+            if( obj ){
+                if( obj.createdBy === '0' ){
+                    obj.createdByRV = new ReactiveVar({ label: ModalInfo.configure().label_zero });
+                } else if( obj.createdBy ){
+                    obj.createdByRV = AccountsTools.preferredLabelRV( obj.createdBy, AccountsTools.C.PreferredLabel.EMAIL_ADDRESS );
+                }
             }
-            if( obj && obj.updatedBy ){
-                obj.updatedByRV = AccountsTools.preferredLabelRV( obj.updatedBy, AccountsTools.C.PreferredLabel.EMAIL_ADDRESS );
+            if( obj ){
+                if( obj.updatedBy === '0' ){
+                    obj.updatedByRV = new ReactiveVar({ label: ModalInfo.configure().label_zero });
+                } else if( obj.updatedBy ){
+                    obj.updatedByRV = AccountsTools.preferredLabelRV( obj.updatedBy, AccountsTools.C.PreferredLabel.EMAIL_ADDRESS );
+                }
             }
             self.MI.object.set( obj );
         });
@@ -62,7 +70,7 @@ Template.miPanel.helpers({
     },
     createdBy(){
         const obj = Template.instance().MI.object.get();
-        return obj && obj.createdBy ? obj.createdByRV.get().label : '';
+        return obj && obj.createdByRV ? obj.createdByRV.get().label : '';
     },
     hasCreatedAt(){
         const obj = Template.instance().MI.object.get();
@@ -128,6 +136,6 @@ Template.miPanel.helpers({
     },
     updatedBy(){
         const obj = Template.instance().MI.object.get();
-        return  obj && obj.updatedBy ? obj.updatedByRV.get().label : '';
+        return  obj && obj.updatedByRV ? obj.updatedByRV.get().label : '';
     }
 });

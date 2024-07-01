@@ -7,6 +7,7 @@
     Release date:
 
     - Introduce trace and configure modules, bumping minor candidate version number
+    - Have a default label when user identifier is zero (todo #10)
 
 ### 1.7.1
 
