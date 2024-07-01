@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.9.0-rc
+### 1.9.0
 
-    Release date:
+    Release date: 2024- 7- 1
 
     - Accept HTML as labels, bumping minor candidate version number
 
