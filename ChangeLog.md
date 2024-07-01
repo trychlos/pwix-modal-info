@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.9.1-rc
+### 1.9.1
 
-    Release date:
+    Release date: 2024- 7- 1
 
     - Modify the configure() verbose message to be consistent with other packages
 
