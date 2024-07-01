@@ -9,6 +9,7 @@ if( false ){
 }
 
 checkNpmVersions({
+    'lodash': '^4.17.0',
     'strftime': '^0.10.0'
 },
     'pwix:modal-info'
