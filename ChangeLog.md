@@ -2,11 +2,11 @@
 
 ## ChangeLog
 
-### 1.8.1-rc
+### 1.9.0-rc
 
-    Release date: 
+    Release date:
 
-    - 
+    - Accept HTML as labels, bumping minor candidate version number
 
 ### 1.8.0
 

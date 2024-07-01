@@ -4,7 +4,7 @@
         <table class="mi-w100">
             {{#if hasName }}
                 <tr>
-                    <td class="mi-name" colspan="2">[ {{ name }} ]</td>
+                    <td class="mi-name" colspan="2">[ {{{ name }}} ]</td>
                 </tr>
             {{/if}}
             {{#if hasCreatedAt }}
@@ -16,7 +16,7 @@
             {{#if hasCreatedBy }}
                 <tr>
                     <td class="mi-right mi-col1 mi-right">{{ i18n key="panel.createdBy" }}</td>
-                    <td>{{ createdBy }}</td>
+                    <td>{{{ createdBy }}}</td>
                 </tr>
             {{/if}}
             {{#if hasUpdatedAt }}
@@ -28,7 +28,7 @@
             {{#if hasUpdatedBy }}
                 <tr>
                     <td class="mi-right mi-col1 mi-right">{{ i18n key="panel.updatedBy" }}</td>
-                    <td>{{ updatedBy }}</td>
+                    <td>{{{ updatedBy }}}</td>
                 </tr>
             {{/if}}
             {{#if hasId }}

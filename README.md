@@ -21,7 +21,11 @@ None at the moment.
 
 `ModalInfo`
 
-### Methods
+#### Functions
+
+##### `ModalInfo.configure()`
+
+    See [below](#configuration).
 
 #### `ModalInfo.i18n.namespace()`
 
@@ -58,7 +62,7 @@ The display panel as an independant component. You are so able to integrate it i
 
 Known parameters are:
 
-- name: the name to be displayed at the top of the object informations, defaulting to nothing
+- name: the name to be displayed at the top of the object informations, as a HTML string, defaulting to nothing
 
 - object: (mandatory) the object to be displayed, or a function which returns such an object.
 
@@ -67,6 +71,40 @@ Known parameters are:
 The function has following prototype: `async fn( <Object>) : Object`, and is called with the current data context.
 
 This package relies on `pwix:accounts-tools` to get the email address (resp. the username) of the creator/last updator of the provided object.
+
+## Configuration
+
+The package's behavior can be configured through a call to the `ModalInfo.configure()` method, with just a single javascript object argument, which itself should only contains the options you want override.
+
+Known configuration options are:
+
+- `label_zero`
+
+    Provides the label to be displayed when user identifier is zero, defaulting to `<System>`.
+
+- `verbosity`
+
+    Define the expected verbosity level.
+
+    The accepted value can be any or-ed combination of following:
+
+    - `ModalInfo.C.Verbose.NONE`
+
+        Do not display any trace log to the console
+
+    - `ModalInfo.C.Verbose.CONFIGURE`
+
+        Trace `ModalInfo.configure()` calls and their result
+
+    - `ModalInfo.C.Verbose.FUNCTIONS`
+
+        Trace all functions calls
+
+Please note that `ModalInfo.configure()` method should be called in the same terms both in client and server sides.
+
+Remind too that Meteor packages are instanciated at application level. They are so only configurable once, or, in other words, only one instance has to be or can be configured. Addtionnal calls to `ModalInfo.configure()` will just override the previous one. You have been warned: **only the application should configure a package**.
+
+`ModalInfo.configure()` is a reactive data source.
 
 ## NPM peer dependencies
 
