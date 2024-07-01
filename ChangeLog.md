@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.7.1-rc
+### 1.7.1
 
-    Release date:
+    Release date: 2024- 7- 1
 
     - Fix display of last update date and time
 
@@ -117,4 +117,4 @@
 
 ---
 P. Wieser
-- Last updated on 2024, Jun. 30th
+- Last updated on 2024, Jul. 1st
