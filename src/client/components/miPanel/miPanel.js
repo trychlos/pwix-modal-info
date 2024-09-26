@@ -10,7 +10,6 @@
 
 import strftime from 'strftime';
 
-import { AccountsTools } from 'meteor/pwix:accounts-tools';
 import { pwixI18n } from 'meteor/pwix:i18n';
 import { ReactiveVar } from 'meteor/reactive-var';
 
@@ -24,10 +23,25 @@ Template.miPanel.onCreated( function(){
     const self = this;
 
     self.MI = {
-        object: new ReactiveVar( null )
+        object: new ReactiveVar( null ),
+
+        // get the parms for ahPreferredLabel, considering the case where userId is zero (created by SAA)
+        preferredParms( field ){
+            let parms = {};
+            const obj = self.MI.object.get();
+            if( obj && Object.keys( obj ).includes( field )){
+                if( obj[field] === 0 || obj[field] === '0' ){
+                    parms = { ahUserLabel: ModalInfo.configure().label_zero };
+                } else {
+                    parms = { ahUserId: obj[field] };
+                }
+            }
+            return parms;
+        }
     };
 
     // get the responsible of the creation (resp. the last update)
+    /*
     self.autorun(() => {
         const obj = Template.currentData().object;
         let promises = [];
@@ -39,18 +53,33 @@ Template.miPanel.onCreated( function(){
                 if( obj.createdBy === '0' ){
                     obj.createdByRV = new ReactiveVar({ label: ModalInfo.configure().label_zero });
                 } else if( obj.createdBy ){
-                    obj.createdByRV = AccountsTools.preferredLabelRV( obj.createdBy, AccountsTools.C.PreferredLabel.EMAIL_ADDRESS );
+                    //obj.createdByRV = AccountsTools.preferredLabelRV( obj.createdBy, AccountsTools.C.PreferredLabel.EMAIL_ADDRESS );
                 }
             }
             if( obj ){
                 if( obj.updatedBy === '0' ){
                     obj.updatedByRV = new ReactiveVar({ label: ModalInfo.configure().label_zero });
                 } else if( obj.updatedBy ){
-                    obj.updatedByRV = AccountsTools.preferredLabelRV( obj.updatedBy, AccountsTools.C.PreferredLabel.EMAIL_ADDRESS );
+                    //obj.updatedByRV = AccountsTools.preferredLabelRV( obj.updatedBy, AccountsTools.C.PreferredLabel.EMAIL_ADDRESS );
                 }
             }
             self.MI.object.set( obj );
         });
+    });
+    */
+
+    // get the target object
+    self.autorun(() => {
+        let obj = Template.currentData().object || null;
+        Promise.resolve( obj )
+            .then(() => {
+                if( obj && typeof obj === 'function' ){
+                    obj( Template.currentData()).then(( res ) => { obj = res; });
+                }
+            })
+            .then(() => {
+                self.MI.object.set( obj );
+            });
     });
 
     //console.debug( Template.currentData());
@@ -67,10 +96,6 @@ Template.miPanel.helpers({
         }
         // defaulting to Intl.DateTimeFormat for the current locale
         return pwixI18n.dateTime( obj.createdAt );
-    },
-    createdBy(){
-        const obj = Template.instance().MI.object.get();
-        return obj && obj.createdByRV ? obj.createdByRV.get().label : '';
     },
     hasCreatedAt(){
         const obj = Template.instance().MI.object.get();
@@ -123,6 +148,17 @@ Template.miPanel.helpers({
     name(){
         return this.name;
     },
+
+    // parms for ahPreferredLabel
+    parmsCreatedBy(){
+        return Template.instance().MI.preferredParms( 'createdBy' );
+    },
+
+    // parms for ahPreferredLabel
+    parmsUpdatedBy(){
+        return Template.instance().MI.preferredParms( 'updatedBy' );
+    },
+
     updatedAt(){
         const obj = Template.instance().MI.object.get();
         if( !obj ){

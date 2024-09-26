@@ -2,11 +2,11 @@
 
 ## ChangeLog
 
-### 1.9.2-rc
+### 1.10.0-rc
 
     Release date: 
 
-    - 
+    - Replace the pwix:accounts-tools dependency with pwix:accounts-hub, thus bumping minor candidate version number
 
 ### 1.9.1
 

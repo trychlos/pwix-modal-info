@@ -16,7 +16,7 @@
             {{#if hasCreatedBy }}
                 <tr>
                     <td class="mi-right mi-col1 mi-right">{{ i18n key="panel.createdBy" }}</td>
-                    <td>{{{ createdBy }}}</td>
+                    <td>{{> ahPreferredLabel (parmsCreatedBy) }}</td>
                 </tr>
             {{/if}}
             {{#if hasUpdatedAt }}
@@ -28,7 +28,7 @@
             {{#if hasUpdatedBy }}
                 <tr>
                     <td class="mi-right mi-col1 mi-right">{{ i18n key="panel.updatedBy" }}</td>
-                    <td>{{{ updatedBy }}}</td>
+                    <td>{{> ahPreferredLabel (parmsUpdatedBy) }}</td>
                 </tr>
             {{/if}}
             {{#if hasId }}
