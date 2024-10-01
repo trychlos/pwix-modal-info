@@ -7,6 +7,7 @@
     Release date: 
 
     - Replace the pwix:accounts-tools dependency with pwix:accounts-hub, thus bumping minor candidate version number
+    - Fix configuration overrides
 
 ### 1.9.1
 

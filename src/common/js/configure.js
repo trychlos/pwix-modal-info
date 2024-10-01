@@ -7,7 +7,6 @@ import _ from 'lodash';
 import { ReactiveVar } from 'meteor/reactive-var';
 
 let _conf = {};
-
 ModalInfo._conf = new ReactiveVar( _conf );
 
 ModalInfo._defaults = {
@@ -23,7 +22,7 @@ ModalInfo._defaults = {
  */
 ModalInfo.configure = function( o ){
     if( o && _.isObject( o )){
-        _.merge( _conf, ModalInfo._defaults, o );
+        _conf = _.merge( ModalInfo._defaults, _conf, o );
         ModalInfo._conf.set( _conf );
         _verbose( ModalInfo.C.Verbose.CONFIGURE, 'pwix:modal-info configure() with', o );
     }
@@ -31,5 +30,5 @@ ModalInfo.configure = function( o ){
     return ModalInfo._conf.get();
 }
 
-_.merge( _conf, ModalInfo._defaults );
+_conf = _.merge( {}, ModalInfo._defaults );
 ModalInfo._conf.set( _conf );
