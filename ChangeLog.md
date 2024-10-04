@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.10.0-rc
+### 1.10.0
 
-    Release date: 
+    Release date: 2024-10- 4
 
     - Replace the pwix:accounts-tools dependency with pwix:accounts-hub, thus bumping minor candidate version number
     - Fix configuration overrides
@@ -143,4 +143,4 @@
 
 ---
 P. Wieser
-- Last updated on 2024, Jul. 1st
+- Last updated on 2024, Oct. 4th
