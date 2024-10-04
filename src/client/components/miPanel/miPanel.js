@@ -40,34 +40,6 @@ Template.miPanel.onCreated( function(){
         }
     };
 
-    // get the responsible of the creation (resp. the last update)
-    /*
-    self.autorun(() => {
-        const obj = Template.currentData().object;
-        let promises = [];
-        if( obj && typeof obj === 'function' ){
-            promises.push( obj( Template.currentData()).then(( res ) => { obj = res; return true; }));
-        }
-        Promise.allSettled( promises ).then(() => {
-            if( obj ){
-                if( obj.createdBy === '0' ){
-                    obj.createdByRV = new ReactiveVar({ label: ModalInfo.configure().label_zero });
-                } else if( obj.createdBy ){
-                    //obj.createdByRV = AccountsTools.preferredLabelRV( obj.createdBy, AccountsTools.C.PreferredLabel.EMAIL_ADDRESS );
-                }
-            }
-            if( obj ){
-                if( obj.updatedBy === '0' ){
-                    obj.updatedByRV = new ReactiveVar({ label: ModalInfo.configure().label_zero });
-                } else if( obj.updatedBy ){
-                    //obj.updatedByRV = AccountsTools.preferredLabelRV( obj.updatedBy, AccountsTools.C.PreferredLabel.EMAIL_ADDRESS );
-                }
-            }
-            self.MI.object.set( obj );
-        });
-    });
-    */
-
     // get the target object
     self.autorun(() => {
         let obj = Template.currentData().object || null;
