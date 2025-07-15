@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - Do not display undefined values
 
 ### 1.10.0
 

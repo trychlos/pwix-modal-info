@@ -21,6 +21,7 @@ import './miPanel.html';
 
 Template.miPanel.onCreated( function(){
     const self = this;
+    //console.debug( this );
 
     self.MI = {
         object: new ReactiveVar( null ),
@@ -74,14 +75,14 @@ Template.miPanel.helpers({
         if( !obj ){
             return false;
         }
-        return Object.keys( obj ).includes( 'createdAt' );
+        return Object.keys( obj ).includes( 'createdAt' ) && obj.createdAt !== undefined;
     },
     hasCreatedBy(){
         const obj = Template.instance().MI.object.get();
         if( !obj ){
             return false;
         }
-        return Object.keys( obj ).includes( 'createdBy' );
+        return Object.keys( obj ).includes( 'createdBy' ) && obj.createdBy !== undefined;
     },
     hasId(){
         const obj = Template.instance().MI.object.get();
@@ -98,14 +99,16 @@ Template.miPanel.helpers({
         if( !obj ){
             return false;
         }
-        return Object.keys( obj ).includes( 'updatedAt' );
+        const res = Object.keys( obj ).includes( 'updatedAt' ) && obj.updatedAt !== undefined;
+        return res;
     },
     hasUpdatedBy(){
         const obj = Template.instance().MI.object.get();
         if( !obj ){
             return false;
         }
-        return Object.keys( obj ).includes( 'updatedBy' );
+        const res = Object.keys( obj ).includes( 'updatedBy' ) && obj.updatedBy !== undefined;
+        return res;
     },
     i18n( arg ){
         return pwixI18n.label( I18N, arg.hash.key );
