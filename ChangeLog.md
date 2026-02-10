@@ -2,6 +2,12 @@
 
 ## ChangeLog
 
+### 1.10.2-rc.0
+
+    Release date: 
+
+    - 
+
 ### 1.10.1
 
     Release date: 2026- 2-10
