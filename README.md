@@ -128,4 +128,4 @@ New and updated translations are willingly accepted, and more than welcome. Just
 
 ---
 P. Wieser
-- Last updated on 2024, Oct. 4th
+- Last updated on 2026, Feb. 10th

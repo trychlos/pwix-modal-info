@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.10.1-rc
+### 1.10.1
 
-    Release date: 
+    Release date: 2026- 2-10
 
     - Do not display undefined values
 
@@ -149,4 +149,4 @@
 
 ---
 P. Wieser
-- Last updated on 2024, Oct. 4th
+- Last updated on 2026, Feb. 10th
