@@ -22,9 +22,20 @@ ModalInfo._defaults = {
  */
 ModalInfo.configure = function( o ){
     if( o && _.isObject( o )){
-        _conf = _.merge( ModalInfo._defaults, _conf, o );
-        ModalInfo._conf.set( _conf );
-        _verbose( ModalInfo.C.Verbose.CONFIGURE, 'pwix:modal-info configure() with', o );
+        // check that keys exist
+        let built_conf = {};
+        Object.keys( o ).forEach(( it ) => {
+            if( Object.keys( ModalInfo._defaults ).includes( it )){
+                built_conf[it] = o[it];
+            } else {
+                console.warn( 'pwix:modal-info configure() ignore unmanaged key \''+it+'\'' );
+            }
+        });
+        if( Object.keys( built_conf ).length ){
+            _conf = _.merge( ModalInfo._defaults, _conf, built_conf );
+            ModalInfo._conf.set( _conf );
+            _verbose( ModalInfo.C.Verbose.CONFIGURE, 'pwix:modal-info configure() with', built_conf );
+        }
     }
     // also acts as a getter
     return ModalInfo._conf.get();
