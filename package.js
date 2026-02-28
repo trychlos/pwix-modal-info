@@ -1,6 +1,6 @@
 Package.describe({
     name: 'pwix:modal-info',
-    version: '1.10.2-rc.0',
+    version: '1.11.0-rc.0',
     summary: 'A Bootstrap-based Meteor package which displays object informations in a modal dialog',
     git: 'https://github.com/trychlos/pwix-modal-info',
     documentation: 'README.md'
@@ -29,6 +29,7 @@ function configure( api ){
     api.use( 'less@4.0.0', 'client' );
     api.use( 'pwix:accounts-hub@1.0.0-rc' );
     api.use( 'pwix:i18n@1.5.7' );
+    api.use( 'pwix:logger@1.0.0-rc' );
     api.use( 'pwix:modal@1.10.0 || 2.0.0' );
     api.use( 'pwix:ui-bootstrap5@2.0.0' );
     api.use( 'pwix:ui-fontawesome6@1.0.0' );

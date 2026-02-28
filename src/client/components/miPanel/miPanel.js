@@ -21,7 +21,6 @@ import './miPanel.html';
 
 Template.miPanel.onCreated( function(){
     const self = this;
-    //console.debug( this );
 
     self.MI = {
         object: new ReactiveVar( null ),
@@ -54,8 +53,6 @@ Template.miPanel.onCreated( function(){
                 self.MI.object.set( obj );
             });
     });
-
-    //console.debug( Template.currentData());
 });
 
 Template.miPanel.helpers({
