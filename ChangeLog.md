@@ -8,6 +8,7 @@
 
     - configure() now warns for unmanaged keys
     - Use pwix:logger universal logger, thus bumping minor candidate version number
+    - Rename pwix:accounts-hub dependency to pwix:accounts-core, upgrading it to 2.0.0-rc.0
 
 ### 1.10.1
 
@@ -19,7 +20,7 @@
 
     Release date: 2024-10- 4
 
-    - Replace the pwix:accounts-tools dependency with pwix:accounts-hub, thus bumping minor candidate version number
+    - Replace the pwix:accounts-tools dependency with pwix:accounts-core, thus bumping minor candidate version number
     - Fix configuration overrides
 
 ### 1.9.1

@@ -79,7 +79,7 @@ Known parameters are:
 
 The function has following prototype: `async fn( <Object>) : Object`, and is called with the current data context.
 
-This package relies on `pwix:accounts-hub` to asynchronously display the email address (resp. the username) of the creator/last updator of the provided object.
+This package relies on `pwix:accounts-core` to asynchronously display the email address (resp. the username) of the creator/last updator of the provided object.
 
 ## Configuration
 

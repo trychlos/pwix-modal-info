@@ -25,15 +25,15 @@ Template.miPanel.onCreated( function(){
     self.MI = {
         object: new ReactiveVar( null ),
 
-        // get the parms for ahPreferredLabel, considering the case where userId is zero (created by SAA)
+        // get the parms for acPreferredLabel, considering the case where userId is zero (created by SAA)
         preferredParms( field ){
             let parms = {};
             const obj = self.MI.object.get();
             if( obj && Object.keys( obj ).includes( field )){
                 if( obj[field] === 0 || obj[field] === '0' ){
-                    parms = { ahUserLabel: ModalInfo.configure().label_zero };
+                    parms = { acUserLabel: ModalInfo.configure().label_zero };
                 } else {
-                    parms = { ahUserId: obj[field] };
+                    parms = { acUserId: obj[field] };
                 }
             }
             return parms;
@@ -121,12 +121,12 @@ Template.miPanel.helpers({
         return this.name;
     },
 
-    // parms for ahPreferredLabel
+    // parms for acPreferredLabel
     parmsCreatedBy(){
         return Template.instance().MI.preferredParms( 'createdBy' );
     },
 
-    // parms for ahPreferredLabel
+    // parms for acPreferredLabel
     parmsUpdatedBy(){
         return Template.instance().MI.preferredParms( 'updatedBy' );
     },
